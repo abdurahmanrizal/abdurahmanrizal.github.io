@@ -5,7 +5,7 @@ nav {
     background-color: #1f1e1d!important;
 }
 .navbar-brand {
-    font-family: 'PT Serif', serif;
+    font-family: 'Source Code Pro', monospace;
 }
 .nav-link {
     color: white!important;;
