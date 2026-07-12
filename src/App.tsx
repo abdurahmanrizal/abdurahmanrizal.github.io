@@ -287,7 +287,7 @@ export default function App() {
               <article>
                 <small>2015 — 2019</small>
                 <h3>Bachelor of Computer Science, Informatics</h3>
-                <p>Dian Nuswantoro University</p>
+                <p>UDINUS</p>
               </article>
               <span aria-hidden="true">01</span>
             </li>
