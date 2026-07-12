@@ -109,6 +109,19 @@ const projects = [
   ],
 ];
 
+const educations = [
+  {
+    year: "2015-2019",
+    academic: "Bachelor of Computer Science, Informatics",
+    school: "Dian Nuswantor University (UDINUS)",
+  },
+  {
+    year: "2012-2015",
+    academic: "Senior High School (IPA)",
+    school: "SMA Negeri 1 Semarang",
+  },
+];
+
 export default function App() {
   const [dark, setDark] = useState(true);
   const [menu, setMenu] = useState(false);
@@ -283,22 +296,18 @@ export default function App() {
           <label>04 / EDUCATION</label>
           <h2>My academic journey.</h2>
           <ol className="education-timeline">
-            <li>
-              <article>
-                <small>2015 — 2019</small>
-                <h3>Bachelor of Computer Science, Informatics</h3>
-                <p>UDINUS</p>
-              </article>
-              <span aria-hidden="true">01</span>
-            </li>
-            <li>
-              <article>
-                <small>2012 — 2015</small>
-                <h3>Senior High School (IPA)</h3>
-                <p>SMA Negeri 1 Semarang</p>
-              </article>
-              <span aria-hidden="true">02</span>
-            </li>
+            {(educations || [])?.map((education, index) => (
+              <li>
+                <article>
+                  <small>{education.year}</small>
+                  <h3>{education.academic}</h3>
+                  <p>{education.school}</p>
+                </article>
+                <span aria-hidden="true">
+                  {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                </span>
+              </li>
+            ))}
           </ol>
         </section>
         <section className="contact" id="contact">
